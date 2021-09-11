@@ -1,0 +1,22 @@
+N = 0
+Z = 0
+
+def setup():
+    
+    size (400, 500)
+def draw():
+    global Z
+    global N
+    background(0,0,125)
+    fill (255,0,0)
+    ellipse(width/1.8,N,70,70)
+    fill(0,255,0)
+    ellipse(width/4.0,Z,70,70)
+    if N > height:
+        N=0
+    else:
+        N = map(second(),0,59,0,height)
+    if Z > height:
+        Z=0
+    else:
+        Z = map(minute(),0,59,0,height)
